@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X=UA-Compatible" content="ie=edge">
+    <title>Alignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 900px;
+            border: 3px solid blue;
+            margin: 33px auto;
+
+        }
+
+        .item {
+            border: 3px solid rgb(80, 68, 37);
+            background-color: rgb(221, 132, 16);
+            margin: 12px 3px;
+            padding: 12px 3px;
+        }
+
+        #fruits {
+            float: left;
+            width: 450px;
+        }
+
+        #computer {
+            float: left;
+            width:450px;
+        }
+        #stationaer {
+                /* float: left; */
+                clear:left;
+                 width:450px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="fruits" class=" item">
+            <h3>Fruits</h3>
+            <p id="fruitspara" class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ea nemo, quam
+                nam aliquam, perspiciatis sapiente deserunt a, voluptatem laudantium officiis eos minima.</p>
+        </div>
+        <div id="computer" class=" item">
+            <h3>computer</h3>
+            <p id="computerpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iste
+                nesciunt illum debitis officia ad dignissimos possimus, optio laboriosam! Sunt in ducimus architecto
+                magnam. Doloribus.</p>
+        </div>
+        <div id="stationaer" class=" item">
+            <h3>stationaer</h3>
+            <p id="stationaerpara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quibusdam
+                obcaecati, quis quos voluptate, temporibus modi omnis sunt accusantium suscipit dolor nesciunt
+                consequatur!</p>
+        </div>
+    </div>
+</body>
+
+</html>

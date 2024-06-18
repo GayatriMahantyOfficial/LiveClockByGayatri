@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Clock (24hr/12hr Format Toggle)</title>
+<style>body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.clock {
+  font-size: 3rem;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}</style>
+</head>
+<body>
+<div class="container">
+  <div class="clock">
+    <div id="time"></div>
+    <button onclick="toggleFormat()">Toggle Format</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<script>
+  let is24HourFormat = true; // Start with 24-hour format
+
+function updateTime() {
+  let now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  if (!is24HourFormat) {
+    // Convert to 12-hour format
+    let meridiem = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Handle midnight (0 hours)
+    document.getElementById('time').textContent = `${hours}:${minutes}:${seconds} ${meridiem}`;
+  } else {
+    // Display time in 24-hour format
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+  }
+}
+
+// Toggle between 24-hour and 12-hour formats
+function toggleFormat() {
+  is24HourFormat = !is24HourFormat;
+  updateTime(); // Update time immediately after toggling format
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial call to display time
+updateTime();
+</script>
+
+

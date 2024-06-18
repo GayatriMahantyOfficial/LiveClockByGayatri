@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <script>
+   function displayTime(){
+    let d = new Date()
+    let hour = d.getHours()
+    let minute = d.getMinutes()
+    let second = d.getSeconds()
+    let amOrPm = "AM"
+    let clockSystem = document.getElementById("24hr-btn")
+
+    // Indicates whether its AM or PM
+    if (hour >= 12){
+        amOrPm = "PM"
+    }
+   // Toggle Clock System
+    function clockSystemTime(){
+         // sets the clock to the 12hr system clock
+        if (hour > 12) {
+            hour -= 12
+    } else {
+        hour += 12
+        }
+    }
+
+    if (hour < 0){
+        hour = "0" + hour
+    }
+
+    if (minute < 10){
+        minute = "0" + minute
+    }
+
+    if (second < 10){
+        second = "0" + second
+    }
+
+    document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second + " " + amOrPm;
+}
+
+setInterval(displayTime, 1000)
+
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+console.log(new Intl.DateTimeFormat('en-US', { timeStyle: 'short', hour12: false, }).format(date));
+
+
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+console.log(new Intl.DateTimeFormat('en-US', { timeStyle: 'short', hour12: true, }).format(date));
+
+
+let twelveHour = false;
+
+function displayTime(){
+   const date = new Date();
+   document.getElementById("clock").innerHTML = new Intl.DateTimeFormat('en-US', { timeStyle: 'long', hour12: twelveHour, }).format(date);
+}
+    
+
+document.getElementById("clock").addEventListener("click", ()=>{
+  clearInterval(interval);
+  twelveHour = !twelveHour;
+  var interval = setInterval(displayTime, 1000)    
+})
+<button id="clock">Click Me</button>
+    </script>
+</body>
+</html>

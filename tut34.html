@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X=UA-Compatible" content="ie=edge">
+    <title>Box shadow and text shadow</title>
+    <style>
+        .container{
+            display:flex;
+        }
+        .card{
+            padding:23px 12px;
+            margin:23px 12px;
+            /* border:2px solid red; */
+            background-color: rgb(224, 184, 53);
+            /* box-shadow: 10px 13px greenyellow; */
+            /* box-shadow: -10px -13px greenyellow; */
+            /* box-shadow: 7px 5px 10px gold; */
+            /* box-shadow: -7px -5px 10px gold; */
+            /* box-shadow: -7px -5px  10px 34px gold; */
+
+            box-shadow: inset 3px 5px greenyellow;
+            box-shadow: 5px 8px gold, 3px 5px rgb(205, 228, 171);
+        }
+        .card h2{
+            /* text-shadow: 2px 3px red; */
+            /* text-shadow: 2px 3px 4px white; */
+            text-shadow: -3px -2px 2px white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>card-1</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed odio assumenda soluta fuga cupiditate voluptatum quae voluptatibus exercitationem reprehenderit dolorem modi, quaerat, quod doloremque, maiores laborum veniam dicta molestias. Nihil voluptatum maxime a cumque.</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>card-2</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias facere voluptatem autem harum possimus! Illum enim odio, omnis voluptas earum ipsum rem illo voluptatem ex inventore dignissimos maxime beatae ea ipsam, aliquam optio fuga?</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>card-3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat a soluta architecto est possimus. Fugiat quod, accusamus ipsa expedita omnis adipisci, cumque, repellat ipsam corporis perferendis quisquam libero? Quia consequatur provident modi voluptatum rem!</p>
+        </div>
+        <div class="card" id="card4">
+            <h2>card-4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur accusantium, dolore officia, pariatur quasi, soluta autem exercitationem porro voluptatem fugit eos mollitia! Aliquam itaque nulla ratione mollitia tempora! Aperiam error earum quibusdam exercitationem asperiores.</p>
+        </div>
+    </div>
+</body>
+</html>

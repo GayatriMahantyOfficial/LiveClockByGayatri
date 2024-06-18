@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X=UA-Compatible" content="ie=edge">
+    <title>fitness</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style>
+    /* css reset */
+    body {
+        color: white;
+        /* margin: 0px;
+        padding: 0px; */
+        background: url(tps://images.pexels.com/photos/28054/pexels-photo-28054.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1ht);
+    }
+
+    .left {
+        /* border: 2px solid red; */
+        display: inline-block;
+        position: absolute;
+        left:34px;
+        top:20px;
+    }
+    .left img{
+        width:90px;
+        /* filter:invert(100%);[img white ] */
+    }
+    .left div{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .mid {
+        display: block;
+        width:550px;
+        margin: 12px auto;
+        padding:0px;
+        /* border: 2px solid rgb(53, 214, 53); */
+    }
+
+    .right {
+        display: inline-block;
+        position: absolute;
+        right:14px;
+        top :20px;
+        /* border: 2px solid yellow; */
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 15px;
+    }
+    .navbar li a{
+        color:white;
+        text-decoration: none;
+        padding: 14px 14px;
+    }
+    .navbar li a:hover{
+        text-decoration: underline;
+        color:rgb(190, 198, 204)
+    }
+    .navbar li a:active{
+        background-color:rgb(62, 202, 62);
+    }
+    .btn{
+        margin:0px 5px;
+        background-color: rgb(163, 151, 184);
+        color:white;
+       border-radius: 10px;
+       cursor:pointer;
+    }
+    .btn:hover{
+        background-color: rgb(220, 238, 245);
+    }
+    .container{
+        /* border:2px solid white; */
+        margin:90px 30px;
+        padding:38px;
+        width:34%;
+        border-radius: 28px;
+    }
+    .form-group input{
+        text-align: center;
+        display: block;
+        width:240px;
+        padding:4px;
+        border:2px solid rgb(24, 3, 3);
+        border-radius: 7px;
+        margin: 11px auto;
+        font-size:12px;
+    }
+    .container button{
+        display: block;
+        width: 250px;
+        margin: 20px auto;
+        padding:4px;
+        background-color: rgb(124, 124, 180);
+    }
+    .container h2{
+        text-align: center;
+    }
+
+</style>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <!-- left box for logo -->
+           <img src="data:image/jpeg;base64,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">
+          <div> Gayatri fitness</div>
+        </div>
+        <div class="mid">
+            <!-- mid box for navbar -->
+             <ul class="navbar"> 
+                 <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">fitness calculator </a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+         </div>
+        </div>
+        <div class="right">
+            <!-- right box for buttons -->
+           <button class="btn">call us now</button>
+           <button class="btn">Email us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h2>join the best gym of Delhi now</h2>
+        <form action="noaction. php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Locality">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your phone number">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

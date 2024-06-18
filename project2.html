@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Clock</title>
+    <link rel="stylesheet" href="style15.css">
+    <script src="script15.js" defer></script>
+</head>
+
+<body>
+    <div class="hero">
+        <h1 class="title"><a>Real Time Clock</a></h1>
+
+        <div class="container">
+            <div class="clock">
+                <div id="time"></div>
+            </div>
+            <span class="span"></span>
+            <span></span>
+            <button  class="click"  onclick="toggleFormat()">Toggle Format</button>
+        </div>
+        <div class="datetimelocal">
+            <input type="date" id="d1">
+            <input type="date" id="d2">
+            <button onclick="calculateDays()">Get Difference</button>
+        </div>
+        <div class="timedifference">
+            <p id="output"></p>
+        </div>
+
+        <div class="sidebar">
+            <h1 class="event ">Event List</h1>
+            <h1>Event:</h1>
+            <ul></ul>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
